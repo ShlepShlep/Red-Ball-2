@@ -12,15 +12,14 @@ public class GameManager : MonoBehaviour
     public List<string> levels;
     public static GameManager instance;
 
+
     void Start()
     {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(this);
-        }
-        else
-        {
+        }else {
             Destroy(this);
             print("Found another singleton instance !!!! Die !!!!");
         }
