@@ -29,11 +29,28 @@ public class GameManager : MonoBehaviour
     public void Win()
     {
         currentLevel++;
+        Invoke("LoadScene",1f);
+    }
+
+    void LoadScene()
+    {
         SceneManager.LoadScene(levels[currentLevel]);
     }
 
     public void Lose()
     {
+        hp--;
+        if (hp > 0)
+        {
+            // restart
+            Invoke("LoadScene",1f);
+        }
+        else
+        {
+            // restart to level 0
+            currentLevel = 0;
+            Invoke("LoadScene",1f);
+        }
 
     }
 }

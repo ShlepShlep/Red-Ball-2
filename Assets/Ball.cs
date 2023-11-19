@@ -46,6 +46,12 @@ public class Ball : MonoBehaviour
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		isGrounded = true;
+
+		if (other.gameObject.tag == "Enemy")
+		{
+			GameManager.instance.Lose();
+			Destroy(gameObject);
+		}
 	}
 
 	void OnCollisionExit2D(Collision2D other)
