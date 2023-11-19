@@ -52,4 +52,9 @@ public class Ball : MonoBehaviour
 	{
 		isGrounded = false;
 	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		GameManager.instance.Win();
+	}
 }
