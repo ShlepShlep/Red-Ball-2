@@ -377,6 +377,9 @@ MonoBehaviour:
   currentLevel: 0
   levels:
   - Showcase
+  winSound: {fileID: 0}
+  loseSound: {fileID: 0}
+  gameOverSound: {fileID: 0}
 --- !u!4 &704426526
 Transform:
   m_ObjectHideFlags: 0
