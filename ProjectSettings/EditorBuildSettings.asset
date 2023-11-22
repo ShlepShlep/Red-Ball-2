@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Level 1.unity
+    path: Assets/Scenes/Level 1.unity
     guid: b1cef616cb9524420bc9f523aa773abe
   - enabled: 1
-    path: Assets/Level 2.unity
+    path: Assets/Scenes/Level 2.unity
     guid: b82066b3f822a4952930910b82d50915
   - enabled: 1
-    path: Assets/Level 3.unity
+    path: Assets/Scenes/Level 3.unity
     guid: 08403eb9881aa4b0aab63e5f2be44273
   - enabled: 1
     path: Assets/Art/Showcase.unity

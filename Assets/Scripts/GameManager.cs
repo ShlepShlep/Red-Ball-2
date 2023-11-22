@@ -12,9 +12,15 @@ public class GameManager : MonoBehaviour
     public List<string> levels;
     public static GameManager instance;
 
+    AudioSource source;
+    public AudioClip winSound;
+    public AudioClip loseSound;
+    public AudioClip gameOverSound;
 
-    void Start()
+
+    void Awake()
     {
+        source = GetComponent<AudioSource>();
         if (instance == null)
         {
             instance = this;
@@ -27,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
+        source.PlayOneShot(winSound);
         currentLevel++;
         Invoke("LoadScene",1f);
     }
@@ -43,12 +50,15 @@ public class GameManager : MonoBehaviour
         {
             // restart
             Invoke("LoadScene",1f);
+            source.PlayOneShot(loseSound);
         }
         else
         {
             // restart to level 0
             currentLevel = 0;
             Invoke("LoadScene",1f);
+            source.PlayOneShot(gameOverSound);
+            hp = 3;
         }
 
     }
